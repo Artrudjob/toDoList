@@ -19,3 +19,15 @@
 	height: 40px;
 	background-image: url(../../images/arrow.png);
 }
+
+.header__link {
+	color: #FBFBFB;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 24px;
+	transition: .3s ease;
+}
+
+.header__link:hover {
+	opacity: .5;
+}
