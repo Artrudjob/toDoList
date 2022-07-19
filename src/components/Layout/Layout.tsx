@@ -1,20 +1,16 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import styles from './layout.module.css';
 
-interface IProps {
-	url: string;
-}
-
 function Layout() {
-	
+
 	return (
 		<>
 			<header className={styles.header}>
 				<div className={styles.header__flexBox}>
 					<div className={styles.header__img}></div>
 					<div>
-						<NavLink to="/profile" className={styles.header__link}>Войти</NavLink>
+						<NavLink to="/planning" className={styles.header__link}>Начать планировать</NavLink>
 					</div>
 				</div>
 			</header>
