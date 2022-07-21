@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FormEvent} from 'react';
 import styles from './login.module.css';
 import closeEye from '../../images/closeEye.png';
 import openEye from '../../images/openEyE.png';
@@ -27,16 +27,20 @@ export class Login extends React.Component<{}, TState> {
 		}))
 	}
 
+	_handleSubmit(e: FormEvent<HTMLFormElement>) {
+		e.preventDefault()
+	}
+
 	render() {
 		return (
 			<div className={styles.login}>
 				<h1 className={styles.login__title} >Войти</h1>
-				<form>
+				<form onSubmit={this._handleSubmit}>
 					<fieldset className={styles.login__box}>
 						<input className={styles.login__input} type='email' placeholder='Ваш e-mail' required></input>
 						<input className={styles.login__input} type={this.state.type} placeholder='Ваш пароль' minLength={7} required></input>
 						<img className={styles.login__img} src={this.state.icon} alt={this.state.eye} onClick={() => {this._showHidePassword()}}/>
-						<button className={styles.login__button} type='submit' disabled={true}>Войти</button>
+						<button className={styles.login__button} type='submit'>Войти</button>
 					</fieldset>
 				</form>
 			</div>
