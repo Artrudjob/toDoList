@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 import styles from './login.module.css';
 import closeEye from '../../images/closeEye.png';
 import openEye from '../../images/openEyE.png';
@@ -42,4 +42,4 @@ export class Login extends React.Component<{}, TState> {
 			</div>
 		)
 	}
-} */
+}
