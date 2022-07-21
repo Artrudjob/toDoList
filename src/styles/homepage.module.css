@@ -1,0 +1,48 @@
+.home {
+	display: flex;
+	justify-content: space-around;
+}
+
+.home__box {
+	margin-top: 100px;
+}
+
+.home__title {
+	font-size: 100px;
+	line-height: 110px;
+	margin: 0;
+	padding: 0;
+}
+
+.home__text {
+	margin-top: 40px;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.home__link {
+	margin-top: 240px;
+	display: block;
+	width: 228px;
+	border: 2px solid #000000;
+	border-radius: 35px;
+	text-decoration: none;
+	transition: .3s ease;
+}
+
+.home__link:hover {
+	opacity: .5;
+}
+
+.home__paragraph {
+	padding: 10px;
+	color: #000000;
+	text-align: center;
+}
+
+.home__img {
+	width: 642px;
+	height: 555px;
+	object-fit: cover;
+	margin-top: 100px;
+}
