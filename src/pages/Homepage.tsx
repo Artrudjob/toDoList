@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/homepage.module.css'
 
-function Homepage() {
+function HomePage() {
 
 	return (
 		<section className={styles.home}>
@@ -18,4 +18,4 @@ function Homepage() {
 	)
 }
 
-export default Homepage;
+export default HomePage;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Login } from '../components/Login/Login';
 import styles from '../styles/loginpage.module.css';
 
-class Loginpage extends React.Component {
+class LoginPage extends React.Component {
 
 	render() {
 		return (
@@ -13,4 +13,4 @@ class Loginpage extends React.Component {
 	}
 }
 
-export default Loginpage;
+export default LoginPage;

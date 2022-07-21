@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-function Planningpage() {
+function PlanningPage() {
 
 	return (
 		<section>
@@ -10,4 +10,4 @@ function Planningpage() {
 	)
 }
 
-export default Planningpage;
+export default PlanningPage;
