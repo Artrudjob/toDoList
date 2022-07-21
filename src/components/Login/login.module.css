@@ -12,6 +12,7 @@
 }
 
 .login__box {
+	position: relative;
 	width: 360px;
 	border: none;
 	margin: 0 auto;
@@ -49,7 +50,16 @@
 }
 
 .login__img {
-	width: 30px;
-	height: 30px;
+	position: absolute;
+	top: 68px;
+	left: 330px;
+	width: 40px;
+	height: 40px;
 	object-fit: contain;
+	cursor: pointer;
+	opacity: .5;
+}
+
+.login__img:hover {
+	opacity: 1;
 }
