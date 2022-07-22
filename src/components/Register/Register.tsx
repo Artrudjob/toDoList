@@ -11,7 +11,7 @@ export class Register extends React.Component<any, TState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            type: 'text',
+            type: 'password',
             color: 'black',
             passwordText: 'Показать пароль'
         }
@@ -23,7 +23,7 @@ export class Register extends React.Component<any, TState> {
         this.setState((prevState) => ({
             type: prevState.type === 'text' ? 'password' : 'text',
             color: prevState.color === 'black' ? '#DF2626' : 'black',
-            passwordText: prevState.passwordText === 'Показать пароль' ? 'Скрыть пароль' : 'Показать пароль'
+            passwordText: prevState.passwordText === 'Скрыть пароль' ? 'Показать пароль' : 'Скрыть пароль'
         }))
     }
 
