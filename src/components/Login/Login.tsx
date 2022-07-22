@@ -34,7 +34,7 @@ export class Login extends React.Component<{}, TState> {
 	render() {
 		return (
 			<div className={styles.login}>
-				<h1 className={styles.login__title} >Войти</h1>
+				<h1 className={styles.login__title}>Войти</h1>
 				<form onSubmit={this._handleSubmit}>
 					<fieldset className={styles.login__box}>
 						<input className={styles.login__input} type='email' placeholder='Ваш e-mail' required></input>
