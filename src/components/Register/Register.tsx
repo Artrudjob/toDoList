@@ -8,6 +8,7 @@ type TState = {
     newPassword: string;
     repeatPassword: string;
     validPasswords: boolean;
+    disabled: boolean
 }
 
 export class Register extends React.Component<any, TState> {
@@ -19,7 +20,8 @@ export class Register extends React.Component<any, TState> {
             passwordText: 'Показать пароль',
             newPassword: '',
             repeatPassword: '',
-            validPasswords: true
+            validPasswords: true,
+            disabled: true
         }
         this._handleChange = this._handleChange.bind(this);
         this._validateField = this._validateField.bind(this);
@@ -29,11 +31,17 @@ export class Register extends React.Component<any, TState> {
     _validateField() {
         if (this.state.newPassword !== this.state.repeatPassword) {
             this.setState(() => {
-                return {validPasswords: false};
+                return {
+                    validPasswords: false,
+                    disabled: true
+                };
             })
         } else {
             this.setState(() => {
-                return {validPasswords: true};
+                return {
+                    validPasswords: true,
+                    disabled: false
+                };
             })
         }
     }
@@ -90,7 +98,7 @@ export class Register extends React.Component<any, TState> {
                             {!this.state.validPasswords && <p className={styles.register__warn}>Пароли не совпадают</p>}
                         </label>
                         <button className={styles.register__password} style={{color: `${this.state.color}`}} type='button' onClick={() => {this._showHidePassword()}}>{this.state.passwordText}</button>
-                        <button className={styles.register__button} type='submit'>Зарегистрироваться</button>
+                        <button className={styles.register__button} type='submit' disabled={this.state.disabled}>Зарегистрироваться</button>
                     </fieldset>
                 </form>
             </div>
