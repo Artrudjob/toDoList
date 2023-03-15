@@ -1,13 +1,25 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
+import { NativeRouter, Route, Routes } from "react-router-native";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import ToDoList from './src/components/ToDoList/ToDoList';
+import FormTask from './src/components/FormTask/FormTask';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <NativeRouter>
+        <StatusBar style="auto" />
+        <Provider store={store}>
+          <Routes>
+            <Route path={"/"} element={<ToDoList />} />
+            <Route path={"/formTask"} element={<FormTask />} />
+          </Routes>
+        </Provider>
+      </NativeRouter>
+    </>
   );
 }
 
